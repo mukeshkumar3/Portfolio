@@ -1,0 +1,38 @@
+<nav [ngClass]=" scrollValue >= 10 ? 'navbar shadow navbar-expand-lg' : 'navbar navbar-expand-lg'" *ngIf="!mobile">
+    <div class="container">
+        <div class="logoSection" data-aos="fade-right">
+            <a href="/">
+                Portfolio
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" (click)="rightAligned.toggle()" aria-controls="navbarRightAlignExample" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars" (click)="menuClicked"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarRightAlignExample" mdbCollapse #rightAligned="mdbCollapse" data-aos="fade-left">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item" *ngFor="let x of menuItems">
+                    <a class="nav-link" routerLink="{{x}}">{{x}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<nav [ngClass]=" scrollValue >= 10 ? 'navbar shadow navbar-expand-lg' : 'navbar navbar-expand-lg'" *ngIf="mobile">
+    <div class="container">
+        <div class="logoSection" data-aos="fade-right">
+            <a href="/">
+                Portfolio
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" (click)="rightAligned.toggle()" aria-controls="navbarRightAlignExample" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars" (click)="menuClicked()"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarRightAlignExample" mdbCollapse #rightAligned="mdbCollapse">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item" *ngFor="let x of menuItems">
+                    <a class="nav-link" routerLink="{{x}}">{{x}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

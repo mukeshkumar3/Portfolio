@@ -1,0 +1,71 @@
+@import '../../../variable.scss';
+
+:host ::ng-deep {
+    .footerSection {
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+
+        .upperGrid {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--Hover);
+
+            h1 {
+                margin: 0;
+                font-family: quicksand;
+                font-size: 24px;
+            }
+
+            .iconSection {
+                display: flex;
+                justify-content: space-between;
+
+                img {
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+        }
+
+        .downGrid {
+            padding: 50px 0;
+            text-align: center;
+
+            h1 {
+                font-family: quicksand;
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+
+            a {
+                line-height: 25px;
+                font-size: 16px;
+                color: rgba(0, 0, 0, .6);
+                cursor: pointer;
+                width: max-content;
+                margin: auto;
+                margin-bottom: 20px;
+
+                &.readOnly{
+                    width: 100%;
+                    pointer-events:none;
+                }
+
+                &:hover {
+                    color: var(--Hover);
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .footerSection {
+
+            .upperGrid {
+                padding: 20px 0;
+
+                h1 {
+                    margin: 0 0 20px 0;
+                }
+            }
+        }
+    }
+}

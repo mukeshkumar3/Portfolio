@@ -1,0 +1,59 @@
+@import '../../../variable.scss';
+
+:host ::ng-deep {
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        min-height: 72px;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: none;
+
+        .logoSection {
+            a {
+                font-family: museoModerno;
+                text-decoration: none;
+                font-size: 42px;
+                color: var(--color);
+            }
+        }
+
+        .nav-item {
+            a {
+                color: #000000;
+                margin-left: 50px;
+                font-size: 20px;
+                text-transform: capitalize;
+                cursor: pointer;
+
+                &:hover,&.active {
+                    color: var(--color);
+                }
+            }
+        }
+
+        &.shadow {
+            backdrop-filter: blur(32px);
+            box-shadow: #919eab29 0 8px 16px;
+        }
+
+        button {
+            width: max-content;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        #navbarRightAlignExample {
+            text-align: center;
+        }
+
+        .navbar {
+            .nav-item {
+                a {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

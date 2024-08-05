@@ -1,0 +1,303 @@
+<section class="heroSection">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="textSection">
+                    <h1 data-aos="fade-right">Hi,</h1>
+                    <h1 data-aos="fade-right">I'am <span>Mukesh</span></h1>
+                    <h1 data-aos="fade-left" [innerHtml]="pharesDisplay"></h1>
+                </div>
+                <div class="buttonSection" data-aos="zoom-in">
+                    <button class="primaryButton">Contact Me</button>
+                    <button class="secondaryButton">Hire Me</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="imageSection" data-aos="fade-up">
+                    <img src="../../assets/portfolioImages/myImage.webp" alt="myImage" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="querySection">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="leftSection">
+                    <h1 data-aos="fade-right">Designing With Passion While Exploring The World.</h1>
+                    <p data-aos="fade-right">Consectetur adipiscing elit, sed do eiusmod tempor ididunt ut labore et
+                        dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod
+                        tempor maecenas accumsan lacus.
+                    </p>
+                    <p data-aos="fade-right">Consectetur adipiscing elit, sed do eiusmod tempor ididunt ut labore et
+                        dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6 rightSection">
+                <h1 data-aos="fade-left">Any Type Of Query & Discussion.</h1>
+                <h2 data-aos="fade-left">Late talk with me</h2>
+                <a data-aos="fade-up" href="mailto:itsmukeshkumar9@gmail.com">itsmukeshkumar9@gmail.com</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="servicesSection">
+    <div class="container">
+        <h1 data-aos="fade-right">
+            What Services you will Get from me!
+        </h1>
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-4">
+                <div class="card">
+                    <!-- <img src="../../assets/portfolioImages/myImage.jpg" alt="services icon"> -->
+                    <div class="circle">
+                        <span class="material-icons" data-aos="zoom-in">
+                            brush
+                        </span>
+                    </div>
+                    <h1 data-aos="zoom-out">UI/UX Design</h1>
+                    <p data-aos="zoom-in">
+                        Free resource that will help nderstand thecv designc process and improve theroi nderstand the
+                        design process andisei impro are of vquality.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4">
+                <div class="card">
+                    <!-- <img src="../../assets/portfolioImages/myImage.jpg" alt="services icon"> -->
+                    <div class="circle">
+                        <span class="material-icons" data-aos="zoom-in">
+                            brush
+                        </span>
+                    </div>
+                    <h1 data-aos="zoom-out">UI/UX Design</h1>
+                    <p data-aos="zoom-in">
+                        Free resource that will help nderstand thecv designc process and improve theroi nderstand the
+                        design process andisei impro are of vquality.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4">
+                <div class="card">
+                    <!-- <img src="../../assets/portfolioImages/myImage.jpg" alt="services icon"> -->
+                    <div class="circle">
+                        <span class="material-icons" data-aos="zoom-in">
+                            brush
+                        </span>
+                    </div>
+                    <h1 data-aos="zoom-out">UI/UX Design</h1>
+                    <p data-aos="zoom-in">
+                        Free resource that will help understand the cv designs process and improve theroi nderstand the
+                        design process and improve are of quality.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="projectsSection" id="profile">
+    <div class="container">
+        <div class="btn-section">
+            <button type="button" [ngClass]="this.active == 1 ? 'btn btn-primary active' : 'btn btn-primary ' "
+                (click)="tab(1)" data-aos="fade-right">Projects</button>
+            <button type="button"
+                [ngClass]="this.active == 2 ? 'btn btn-primary width active' : 'btn btn-primary width' "
+                (click)="tab(2)" data-aos="fade-up">About Me</button>
+            <button type="button" [ngClass]="this.active == 3 ? 'btn btn-primary active' : 'btn btn-primary' "
+                (click)="tab(3)" data-aos="fade-left">Locker</button>
+        </div>
+        <div class="DeatilsSection">
+            <div class="projectSection" *ngIf="this.active == 1">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-4" *ngFor="let x of projects" data-aos="zoom-in">
+                        <div class="card">
+                            <div class="imageSection">
+                                <img [src]="x.imageUrl" alt="icon">
+                            </div>
+                            <h1>{{x.name}}</h1>
+                            <p>{{x.role}}</p>
+                            <button type="button" (click)="visit(x.link)" class="secondaryButton">Visit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutSection" *ngIf="this.active == 2">
+                <h1 data-aos="zoom-in">&ensp;Wow, a whole page just about me!&ensp;</h1>
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-4" data-aos="fade-right">
+                        <div class="imageSection">
+                            <img src="../../assets/portfolioImages/myweb.jpg" alt="myself">
+                            <!-- <img src="C:\FrontEnd\Angular-portfolio\src\assets\portfolioImages\myweb.jpg" alt="myself"> -->
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <h2 data-aos="fade-up">Me taking about myself</h2>
+                        <p data-aos="fade-up">I'm a web designer and front end developer from Faridabad.
+                            India who loves design and the internet sphere.
+                        </p>
+                        <p data-aos="fade-up">A whizz at website and UI design, front end developement,
+                            freelancer. Always on the lookout for exciting projects to work on.</p>
+                        <div data-aos="fade-up">
+                            <a href="../../assets/cv/harshResume.pdf" download="harshResume.pdf"
+                                class="secondaryButton">Download Resume</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 rightCloumn">
+                        <div class="cicrle" data-aos="fade-left">
+                            <h3>{{time.year}}</h3>
+                            <p>{{yearInWords}}</p>
+                        </div>
+                        <h2 data-aos="fade-left">{{time.days}} Days</h2>
+                        <h2 data-aos="fade-left">{{time.hour}} Hours</h2>
+                        <h3 data-aos="fade-left">{{time.minutes}} Minutes</h3>
+                        <h4 data-aos="fade-left">{{time.seconds}} Seconds</h4>
+                        <h5 data-aos="fade-left">spent making websites</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="secretSection" *ngIf="this.active == 3">
+                <div class="row" *ngIf=locker>
+                    <div class="col-12 col-md-6 col-lg-6" data-aos="fade-right">
+                        <img src="../../assets/locker/pc.jpeg" alt="!Locker">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 rightSection" data-aos="fade-left">
+                        <h1>
+                            This is section locked
+                        </h1>
+                        <p *ngIf="toast">Wrong Password</p>
+                        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                            <input type="password" placeholder="Enter Passcode" formControlName="password" required />
+                            <button class="primaryButton" type="submit" [disabled]="!profileForm.valid">Send</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="insideInLocker" *ngIf=locker>
+                    <h1>Add Project section</h1>
+                    <form [formGroup]="projectForm">
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-6 imageSection">
+                                <div class="outerCircle">
+                                    <div class="innerCircle">
+                                        <div class="labelSection" *ngIf="before">
+                                            <label for="file-upload" class="uploadButton">
+                                                <i class="fas fa-camera"></i>
+                                                <p>Upload Photo</p>
+                                            </label>
+                                            <input id="file-upload" type="file"
+                                                accept="image/png, image/gif, image/jpeg"
+                                                (change)="OnImageUpload($event)" formControlName="image" />
+                                        </div>
+                                        <div class="imageSection" *ngIf="!before">
+                                            <img [src]="userPicture" alt="User">
+                                            <div class="remove" (click)="removePicture($event)">
+                                                <p>x</p>
+                                                <p>remove</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6">
+                                        <input type="text" formControlName="name" placeholder="Name">
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-6">
+                                        <input type="text" formControlName="role" placeholder="Role">
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-6">
+                                        <input type="text" formControlName="link" placeholder="Link">
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-6"></div>
+                                    <div class="col-12 col-md-6 col-lg-6">
+                                        <button class="primaryButton" (click)="projectFormSubmit()"
+                                            [disabled]="!projectForm.valid">
+                                            Submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="knowSection">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-6">
+                <h1 data-aos="fade-right">
+                    Knowledge of some libraries & frameworks
+                </h1>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6" data-aos="fade-left">
+                <div class="rotateContainer">
+                    <div id="cube">
+                        <figure class="side front"><img src="../../assets/cube/node.png" alt="icon"></figure>
+                        <figure class="side back"><img src="../../assets/cube/angular.svg" alt="icon"></figure>
+                        <figure class="side right"><img src="../../assets/cube/bootstrap.png" alt="icon"></figure>
+                        <figure class="side left"><img src="../../assets/cube/react.png" alt="icon"></figure>
+                        <figure class="side top"><img src="../../assets/cube/js.png" alt="icon"></figure>
+                        <figure class="side bottom"><img src="../../assets/cube/prime.webp" alt="icon"></figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr data-aos="zoom-in">
+    </div>
+</section>
+<section class="knowSection">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-6" data-aos="fade-right">
+                <div class="rotateContainer">
+                    <div id="cube">
+                        <figure class="side front"><img src="../../assets/cube/cube2/html.png" alt="icon"></figure>
+                        <figure class="side back"><img src="../../assets/cube/cube2/css.png" alt="icon"></figure>
+                        <figure class="side right"><img src="../../assets/cube/cube2/mui.png" alt="icon"></figure>
+                        <figure class="side left"><img src="../../assets/cube/cube2/mongo.png" alt="icon"></figure>
+                        <figure class="side top"><img src="../../assets/cube/cube2/mdb.jpeg" alt="icon"></figure>
+                        <figure class="side bottom"><img src="../../assets/cube/cube2/aos.png" alt="icon"></figure>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6" data-aos="fade-left">
+                <h1>
+                    Knowledge of some libraries & frameworks
+                </h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container" id="contact">
+    <div class="contactSection">
+        <h1 data-aos="zoom-in">Message</h1>
+        <form [formGroup]="contactForm">
+            <div class="row">
+                <div class="col-12 col-md-5 col-lg-5" data-aos="fade-right">
+                    <input type="text" formControlName="name" placeholder="Full name">
+                </div>
+                <div class="col-12 col-md-2 col-lg-2">
+                </div>
+                <div class="col-12 col-md-5 col-lg-5" data-aos="fade-left">
+                    <input type="email" formControlName="email" placeholder="Your email">
+                </div>
+                <div class="col-12 col-md-5 col-lg-5" data-aos="fade-right">
+                    <input type="text" formControlName="subject" placeholder="Subject">
+                </div>
+                <div class="col-12 col-md-2 col-lg-2">
+                </div>
+                <div class="col-12 col-md-5 col-lg-5" data-aos="fade-left">
+                    <textarea rows="1" formControlName="message" placeholder="Your message goes here"></textarea>
+                </div>
+                <div class="sendButtonSection" data-aos="fade-up">
+                    <button class="primaryButton" (click)="conatctFormSubmit()"
+                        [disabled]="!contactForm.valid">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

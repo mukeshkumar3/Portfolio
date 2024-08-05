@@ -1,0 +1,110 @@
+@import './variable.scss';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+@import '~mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+@font-face {
+    font-family: quicksand;
+    src: url(assets/fonts/Quicksand-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: museoModerno;
+    src: url(assets/fonts/MuseoModerno-Regular.ttf) format("truetype");
+}
+
+:root {
+    --color: #ff0000;
+    --Hover: rgba(255, 0, 0, .7);
+    --Background: rgba(255, 0, 0, 0.02);
+}
+
+[data-theme="red"] {
+    --color: #ff0000;
+    --Hover: rgba(255, 0, 0, .7);
+    --Background: rgba(255, 0, 0, 0.02);
+}
+
+[data-theme="blue"] {
+    --color: #0000ff;
+    --Hover: rgba(0, 0, 255, .7);
+    --Background: rgba(0, 0, 255, 0.02);
+}
+
+body {
+    background: var(--background-color);
+    font-family: quicksand;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        text-align: center;
+    }
+}
+
+.container {
+    overflow-x: hidden;
+}
+
+button {
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 8px;
+    height: 50px;
+    width: 150px;
+
+    &:disabled {
+        pointer-events: none;
+        opacity: .6;
+    }
+}
+
+.primaryButton {
+    border: none;
+    transition: 0.25s;
+    background: var(--Hover);
+    color: #ffffff;
+    margin: 0 8px;
+
+    &:hover {
+        box-shadow: inset 150px 0 0 0 var(--color);
+    }
+
+    &:disabled{
+        pointer-events: none;
+        opacity: .4;
+    }
+}
+
+.secondaryButton {
+    border: 1px solid var(--Hover);
+    color: var(--Hover);
+    transition: 0.25s;
+    background: transparent;
+
+    &:hover {
+        box-shadow: inset 0 -3.25em 0 0 var(--Hover);
+        border: 1px solid var(--Hover);
+        color: #ffffff;
+    }
+}
+
+input,
+textarea {
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .6);
+    border-radius: 0px;
+    background: transparent;
+    margin-bottom: 40px;
+    padding: 10px 0;
+    font-family: quicksand !important;
+    width: 100%;
+
+    &:focus-visible {
+        outline: none;
+    }
+}
